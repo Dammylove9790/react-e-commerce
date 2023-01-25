@@ -1,4 +1,152 @@
-.App {
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.main h3{
+  /* text-align: center; */
+  font-size: 25px;
+  padding: 5px;
+}
+
+.btn{
+  background-color: blue;
+  color:white;
+  border-radius: 10%;
+  padding:2% 5%;
+  margin:2%;
+  display:inline-block;
+  text-decoration: none;
+}
+.btn-warning{
+  background-color: black;
+}
+.btn-warning:hover{
+  background-color: blue;
+  color: orange;
+  outline: 1px solid yellow;
+}
+.des p{
+  /* width: 35%; */
+  text-align: center;
+}
+.des{
+  text-align: center;
+  /* width: 35%; */
+}
+.main p{
+  /* text-align: center; */
+  /* text-align: justify; */
+  font-size: 20px;
+  /* width: 50%; */
+  /* margin: auto; */
+
+}
+
+.btn:hover{
+  color:white;
+  background-color: orange;
+}
+
+nav{
+  background-color: orange;
+  padding: 20px 0;
+  text-align: center;
+}
+nav a{
+  font-size: 20px;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover{
+  border-bottom: 1px solid white;
+}
+
+
+#img img{
+  background-size: cover;
+  width: 100%;
+}
+
+.con{
+  display: flex;
+  /* text-align: center; */
+  justify-content: center;
+}
+.con1{
+  display: flex;
+  text-align: center;
+  margin: 20px;
+  
+  
+}
+
+.con11{
+  /* width: 20%; */
+  align-self: center;
+  justify-content: center;
+}
+.con1 img{
+  width: 100%;
+  height: 300px;
+  /* text-align: center; */
+}
+
+.con2 img{
+  width: 20%;
+  height: 200px;
+  
+}
+
+.con2{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+#concon{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  
+}
+#contain{
+  width: 55%;
+  padding-right: 10px;
+  /* text-align: center; */
+  /* display: flex; */
+  /* justify-content: center; */
+}
+#contain img{
+  height: 350px;
+   width: 100%;
+}
+
+
+#box2{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+ 
+}
+#input{
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+}
+#box2 img{
+  height: 175px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +183,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
