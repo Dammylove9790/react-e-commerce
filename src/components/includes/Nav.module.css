@@ -1,0 +1,26 @@
+.navBar{
+    display:flex;
+    background-color: green;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .leftnavBar{
+    display:flex;
+  }
+  .rightnavBar{
+    display:flex;
+  }
+  .navBar li{
+    list-style-type: none;
+    /* margin: 0 16px;
+    padding: 2%; */
+  }
+  li a{
+    text-decoration: none;
+    color:white;
+    font-size: 20px;
+  }
+  li a:hover{
+    color:orange;
+  }
+  

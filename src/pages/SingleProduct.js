@@ -1,7 +1,10 @@
 import { useParams } from "react-router-dom"
 import axios from 'axios';
+
+
 import './../App.css';
 import { useEffect, useState } from "react";
+
 function SingleProduct() { 
 
 
@@ -49,6 +52,7 @@ function SingleProduct() {
            <h3>Category: {data.category}</h3>
            <h3>Description: <span>{data.description}</span></h3>
         </div>
+      
       </div>
 
       <div className="con2">
@@ -59,7 +63,7 @@ function SingleProduct() {
     </div>
     
 
-    </div> : "Loading ...."}
+    </div> : '...loading'}
   
     </>
     

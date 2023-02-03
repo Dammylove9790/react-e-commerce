@@ -1,24 +1,18 @@
 import Button from './Button';
 import { useParams } from 'react-router-dom';
 import './Product.css';
-import React, { useState,useEffect } from 'react'
+import { useEffect, useState } from 'react';
+
 import { Link } from 'react-router-dom';
 function Product(props){
   
     const{id, title, description,price, discountPercentage, rating, stock, brand, category, thumbnail, images } = props;
     const [des, setDes] = useState([]);
-    const describe = (e)=>{
-        let name= e.target.name;
-        let value = e.target.value;
-        // console.log(name)
-        setDes({
-         ...value,
-         [name]: value,
-        })
-         
-     }
+   
     console.log(props)
     return(
+        <>
+        {/* {JSON.stringify(props)} */}
         <div className='product'>
             <h3 className='center'> {title}</h3>
             <img src={images[0]} alt={title} />
@@ -26,7 +20,7 @@ function Product(props){
             <Link to={`/product/${id}`} className="btn btn-warning">Details</Link>
             <Button  />
         </div>
-    
+        </>
     )
 }
 
