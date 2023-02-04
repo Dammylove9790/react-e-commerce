@@ -7,10 +7,9 @@ import { useEffect, useState } from "react";
 
 function SingleProduct() { 
 
-
   const [data, setdata] = useState('');
- const {id}= useParams();
- const  getSingleProduct = async ()=>{
+  const {id}= useParams();
+  const  getSingleProduct = async ()=>{
   try{
         let prod = await axios(`https://dummyjson.com/products/${id}`)
          setdata(prod.data)

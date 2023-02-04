@@ -10,7 +10,7 @@ function AddProduct() {
     const [product, setProduct] = useState({
         title: '',
         price: '',
-        image: [],
+        images: [],
         description: '',
         discountPercentage: '',
         brand: '',
@@ -34,7 +34,7 @@ function AddProduct() {
 
     title: product.title,
         price: product.price,
-        images: product.image.split(','),
+        images: product.images,
         description: product.description,
         discountPercentage: product.discountPercentage,
         brand: product.brand,
@@ -47,7 +47,7 @@ function AddProduct() {
     axios.post('https://dummyjson.com/products/add',{
       title: product.title,
       price: product.price,
-      images: product.image,
+      images: product.images,
       description: product.description,
       discountPercentage: product.discountPercentage,
       brand: product.brand,
@@ -60,10 +60,15 @@ function AddProduct() {
     .catch(err => {
       console.error(err);
     })
-}
+    }
+  
+  function clearData() {
+    localStorage.clear();
+  }
+
    
   return (
-    <div style={{textAlign: 'center'}}>
+    <div style={{textAlign: 'center', margin: '20px 0 40px'}}>
         <fieldset>
         <div>Add Product</div>
         
@@ -90,7 +95,7 @@ function AddProduct() {
        </p>
        <p>
        <label>Image Url</label> <br />
-        <input type="url" name="image"  onChange={handleInput}/>
+        <input type="url" name="images"  onChange={handleInput}/>
        </p>
        <button type="submit"> Add Product</button>
         </form>
@@ -99,4 +104,4 @@ function AddProduct() {
   )
 }
 
-export default AddProduct
+export default AddProduct 

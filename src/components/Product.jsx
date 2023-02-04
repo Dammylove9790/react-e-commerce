@@ -2,13 +2,13 @@ import Button from './Button';
 import { useParams } from 'react-router-dom';
 import './Product.css';
 import { useEffect, useState } from 'react';
-
 import { Link } from 'react-router-dom';
+
+
 function Product(props){
   
-    const{id, title, description,price, discountPercentage, rating, stock, brand, category, thumbnail, images } = props;
-    const [des, setDes] = useState([]);
-   
+    const{id, title, description,price, discountPercentage, rating, stock, brand, category, thumbnail, images } = props.value;
+    
     console.log(props)
     return(
         <>

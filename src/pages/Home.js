@@ -7,13 +7,13 @@ import ProductsPage from './ProductsPage';
 import Product from '../components/Product';
 import { useLocation } from 'react-router-dom';
 
-
+// Alway remmenber to be removing any code you are not using to avoid confusions. Thanks...
 
 function HomePage() {
   const [products, setProducts] =useState([]);
   const [search, setSearch] = useState(''); 
-  const [storedProducts, setStoredProducts] = useState([]);
-  const [allProducts, setAllProducts] = useState([]);
+  const [storedProducts, setStoredProducts] = useState([]);  // No need
+  const [allProducts, setAllProducts] = useState([]);  // No need
   // const location = useLocation();
   async function getProduct(){
     try{
@@ -34,9 +34,7 @@ function HomePage() {
 
 
   
-    const addProduct=()=>{
-
-  
+    const addProduct=()=>{    // No need for this function
   if (localStorage.getItem('product') && products.length > 0) {
     let prod = JSON.parse(localStorage.getItem('product')) ;
     setAllProducts([...allProducts, prod]);
@@ -67,7 +65,7 @@ function HomePage() {
    
   }
 
-  useEffect(() => {
+  useEffect(() => {    // No need for this useEffect
     const storedProducts = JSON.parse(localStorage.getItem('products')) || [] ;
     addProduct(products)
     setProducts(storedProducts);
@@ -77,12 +75,12 @@ function HomePage() {
   
   
   
-  useEffect(() => {
+  useEffect(() => {    // No need for this useEffect
     addProduct()
   }, []);
   
   
-  useEffect(() => {
+  useEffect(() => {     // No need this useEffect is enough
     getProduct();
   }, [search]);
   
